@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(black, .8);
+
+  &__logo {
+    width: 6rem;
+    height: auto;
+  }
+}
+
+.section {
+  z-index: 1;
+
+  &__paragraph {
+    margin: 3rem 0 0;
+    font-size: 2rem;
+  }
+
+  &__fixed {
+    background-image: url('../img/conference.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 20rem 5rem 0;
+    overflow: hidden;
+  }
+
+  &__scroll {
+    padding: 3rem;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    height: 100vh;
+
+    &__img {
+      transform: translate(15rem, 0);
+    }
+
+    &__fixed {
+      bottom: 0;
+      background-color: red;
+    }
+
+    &__scroll {
+      padding: 10rem;
+    }
+  }
+}

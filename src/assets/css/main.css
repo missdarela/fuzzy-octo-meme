@@ -1,0 +1,257 @@
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/WorkSans-Light.ttf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/WorkSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/WorkSans-Regular.ttf");
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: #cccccc;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  cursor: pointer;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: white;
+  font-family: WorkSans, sans-serif;
+}
+
+h1, h2,
+h3, h4,
+p, input {
+  font-family: WorkSans, sans-serif;
+}
+
+.heading--fancy {
+  font-size: 4rem;
+  font-weight: 400;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: .2rem double currentColor;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  font-family: WorkSans, sans-serif;
+  background-color: #ff6700;
+  color: white;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.btn--link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1.5rem 3rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: gray;
+}
+
+.btn--cta {
+  background-color: #ff6700;
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .btn {
+    font-weight: 900;
+  }
+}
+
+.indicator {
+  padding: .3rem 5rem;
+  margin: 0 .2rem;
+  background-color: gray;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.indicator--active {
+  background-color: #ff6700;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.input-group {
+  display: block;
+  -webkit-margin-before: 1.5rem;
+          margin-block-start: 1.5rem;
+}
+
+.input-group__label {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.input-group__input {
+  width: 100%;
+  -webkit-margin-before: .5rem;
+          margin-block-start: .5rem;
+  padding: .5rem 1rem;
+  font-size: 2rem;
+  border: 0.2rem solid gray;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  font-family: inherit;
+}
+
+.input-group__input:focus {
+  border-color: #ff6700;
+}
+
+.alert {
+  --type: grey;
+  padding: .5rem 1rem 1.5rem;
+  border-left: 0.5rem solid var(--type);
+  background-color: white;
+  color: black;
+}
+
+.alert__heading {
+  font-size: 2.5rem;
+  margin: 0 0 .5rem;
+  font-weight: 900;
+  color: var(--type);
+}
+
+.alert__paragraph {
+  font-size: 1.8rem;
+}
+
+.alert--success {
+  --type: forestgreen;
+  background-color: #e6f9e6;
+}
+
+.alert--danger {
+  margin: 2rem 0 0;
+  --type: tomato;
+  background-color: #ffe5e0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2rem;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header__logo {
+  width: 6rem;
+  height: auto;
+}
+
+.section {
+  z-index: 1;
+}
+
+.section__paragraph {
+  margin: 3rem 0 0;
+  font-size: 2rem;
+}
+
+.section__fixed {
+  background-image: url("../img/conference.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 20rem 5rem 0;
+  overflow: hidden;
+}
+
+.section__scroll {
+  padding: 3rem;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    height: 100vh;
+  }
+  .section__img {
+    -webkit-transform: translate(15rem, 0);
+            transform: translate(15rem, 0);
+  }
+  .section__fixed {
+    bottom: 0;
+    background-color: red;
+  }
+  .section__scroll {
+    padding: 10rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

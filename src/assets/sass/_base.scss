@@ -1,0 +1,47 @@
+@font-face {
+  font-family: WorkSans;
+  src: url('../fonts/WorkSans-Light.ttf');
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url('../fonts/WorkSans-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url('../fonts/WorkSans-Regular.ttf');
+  font-weight: 700;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  background-color: lighten($black, 60);
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lighten($black, 40);
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    background-color: lighten($black, 30);
+  }
+}
+
+html {font-size: 62.5%;}
+
+body {
+  font-size: 1.6rem;
+  background-color: $white;
+  font-family: WorkSans, sans-serif;
+}
